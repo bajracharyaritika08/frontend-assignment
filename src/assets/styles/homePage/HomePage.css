@@ -1,0 +1,33 @@
+.homepage__container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    background-color:#CFE3E9;
+    line-height: 1.9;
+}
+.homeright_wrapper{
+    width: 50%;
+    background-image: url('../../images/backgroundimgshop.png');
+    height: 100vh;
+    justify-content: center;
+    background-position: right;
+    background-repeat: no-repeat;
+
+}
+.homeleft_wrapper{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 100px;
+}
+.heading{
+    color: rgb(62, 62, 166);
+    font-family: sans-serif;
+    font-size: 55.23px;
+}
+.quotes{
+    font-size: larger;
+}
