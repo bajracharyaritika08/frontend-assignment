@@ -10,8 +10,8 @@ export const Navigation = () => {
     <Routes>
         <Route path='/' element={<HomePage/>}/>
         <Route path='/homepage' element={<HomePage/>}/>
-        <Route path='/productpage' element={<ProductPage/>}/>
-        <Route path='/productdetail/:id' element={<ProductDetail/>}/>
+        <Route path='/products' element={<ProductPage/>}/>
+        <Route path='/product/:id' element={<ProductDetail/>}/>
         <Route path='*' element={<PageNotFound/>}/>
     </Routes>
   )

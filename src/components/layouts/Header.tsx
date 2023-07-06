@@ -1,34 +1,40 @@
+import { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-
+import '../../assets/styles/header/Header.css'
+import { ProductContext } from '../../context/ProductContext';
+import { ConstantValues } from '../../constant/ContantValues';
 function Header() {
+  const {state, dispatch}:any= useContext(ProductContext)
+  const [inputData, setInputData] = useState('');
+  const handleInputChange = (event:any) => {
+    setInputData(event.target.value);
+    dispatch({
+      type:ConstantValues.getProductSearch,
+      payload:{
+        userInput :inputData,
+      }
+    })
+  };
+  // console.log("INPUT DATA", inputData)
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" variant='light' className="bg-light">
       <Container fluid>
-        <Navbar.Brand href="/homepage">Online Store</Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
+        <Navbar.Brand href="/homepage" >Online Store</Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" className="custom-toggler" />
+        <Navbar.Collapse id="navbarScroll" >
           <Nav
             className="me-auto my-2 my-lg-0"
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="/homepage">Home</Nav.Link>
-            <Nav.Link href="/productpage">Products</Nav.Link>
+            <Nav.Link href="/homepage" >Home</Nav.Link>
+            <Nav.Link href="/products" >Products</Nav.Link>
           </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
+          
         </Navbar.Collapse>
       </Container>
     </Navbar>
@@ -36,3 +42,7 @@ function Header() {
 }
 
 export default Header;
+
+function setUserInput(value: any) {
+  throw new Error('Function not implemented.');
+}

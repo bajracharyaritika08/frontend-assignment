@@ -1,0 +1,38 @@
+.product_card_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    width: 100%;
+    
+}
+.image_card{
+    height: 150px;
+}
+.heading_products{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.card_content_wrapper{
+    padding: 10px;
+    margin: 20px;
+}
+.image_card{
+    height:350px;
+}
+.text_products{
+    padding: 15px;
+    font-family: serif;
+    font-size: xx-large;
+    color: rgb(0, 0, 216);
+}
+.main_detail_container{
+    display: flex;
+}
+.image_product{
+    height: 100%;
+    width: 50%;
+}

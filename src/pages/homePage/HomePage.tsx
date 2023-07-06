@@ -2,6 +2,8 @@ import React from 'react'
 import Layout from '../../components/layouts/Layout'
 import '../../assets/styles/homePage/HomePage.css'
 import Cbutton from '../../common/button/Cbutton'
+import AboutUs from '../aboutUs/AboutUs'
+import AboutUsTwo from '../aboutUs_two/AboutUsTwo'
 const HomePage = (props:any) => {
 const heroPageDetail =[{
   id:1,
@@ -28,8 +30,9 @@ const heroPageDetail =[{
         </div>
       </div>
       <div className='about__wrapper'>
-
       </div>
+      <AboutUs/>
+      {/* <AboutUsTwo/> */}
     </Layout>
   )
 }
